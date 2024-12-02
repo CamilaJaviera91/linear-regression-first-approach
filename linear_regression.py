@@ -9,3 +9,10 @@ Step 1: Collect data
 Collect temperature and sales data from the user
 """
 temp, sales = collect_data()
+
+"""
+Step 2: Sort the datafor better visualization
+Sorting ensures the data us ordered for clear plotting
+"""
+temp.sort(axis=0)  #Sort temperatures
+sales.sort(axis=0) #Sort sales
