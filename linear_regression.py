@@ -20,5 +20,19 @@ sales.sort(axis=0) #Sort sales
 """Step 3: Create the linear regression model"""
 model = LinearRegression()
 
-#Train the model usubg the collected data
+#Train the model using the collected data
 model.fit(temp, sales)
+
+"""
+Step 4: make a prediction
+Get a temperature value from the user for prediction
+"""
+pred = get_prediction()
+
+#Check if the predicted temperature is within the training data range
+if pred < temp.min() or pred > temp.max():
+    print(f"Warning! The entered {pred} is outside the range of training data")
+
+#Use the model to predict sales for the given temperature
+prediction = model.predict([[pred]])
+print(f"If the temperature is {pred}ºC, approximately {prediction[0][0]:.0f} ice creams will be sold.")
