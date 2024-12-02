@@ -19,7 +19,6 @@ def collect_data():
             print("Invalid input. Please enter numbers only or type 'exit'")
     
     #Collect sales data
-
     ice_crea_sales = []
 
     while True:
@@ -33,4 +32,9 @@ def collect_data():
             ice_crea_sales.append(num_sales)
         except:
             print("Invalid input. Please enter numbers only or type 'exit'")
-    
+
+    #Verify that both lists have the same lenght
+    if len(temperature) != len(ice_crea_sales):
+        print("\nThe temperature ans sales lists MUST HAVE the same number of elements.")
+        print("Please re-enter the data\n")
+        return collect_data() #Recursively call the function to restart data collection
