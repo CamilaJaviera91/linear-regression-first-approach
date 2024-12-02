@@ -35,6 +35,12 @@ def collect_data():
 
     #Verify that both lists have the same lenght
     if len(temperature) != len(ice_crea_sales):
-        print("\nThe temperature ans sales lists MUST HAVE the same number of elements.")
+        print("\nThe temperature and sales lists MUST HAVE the same number of elements.")
         print("Please re-enter the data\n")
         return collect_data() #Recursively call the function to restart data collection
+    
+    #Convert lists to NumPy arrays for further processing
+    temp = np.array(temperature).reshape(-1, 1).astype(int) #Reshape to a column vector
+    sales = np.array(ice_crea_sales).reshape(-1, 1).astype(int) #Reshape to a column vector
+
+    return temp, sales #Return the temperature and sales array
