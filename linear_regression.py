@@ -16,3 +16,9 @@ Sorting ensures the data us ordered for clear plotting
 """
 temp.sort(axis=0)  #Sort temperatures
 sales.sort(axis=0) #Sort sales
+
+"""Step 3: Create the linear regression model"""
+model = LinearRegression()
+
+#Train the model usubg the collected data
+model.fit(temp, sales)
