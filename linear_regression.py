@@ -36,3 +36,21 @@ if pred < temp.min() or pred > temp.max():
 #Use the model to predict sales for the given temperature
 prediction = model.predict([[pred]])
 print(f"If the temperature is {pred}ºC, approximately {prediction[0][0]:.0f} ice creams will be sold.")
+
+"""
+Step 5: Plot the results
+Scatter plot for actual data points
+"""
+plt.scatter(temp, sales, color='blue', label='Actual data')
+
+#Plot the regression line
+plt.plot(temp, model.predict(temp), color='red', label='Model Line')
+
+#Add labels and title for the plot
+plt.xlabel("Temperature (ºC)")
+plt.ylabel("Ice cream Sales")
+plt.title("Linear Regression: Ice Cream Sales vs Temperature")
+plt.legend
+
+#Display the plot
+plt.show()
