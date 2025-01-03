@@ -1,4 +1,4 @@
-# README: Ice Cream Sales Prediction Using Linear Regression
+# Ice Cream Sales Prediction Using Linear Regression
 
 This project implements a simple linear regression model to predict ice cream sales based on temperature. It includes user interaction for collecting data, building the regression model, making predictions, and visualizing results.
 
